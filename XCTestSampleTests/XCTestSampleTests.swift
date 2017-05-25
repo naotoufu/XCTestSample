@@ -21,6 +21,17 @@ class XCTestSampleTests: XCTestCase {
         super.tearDown()
     }
     
+    func testShowWeather() {
+        class VCMock:ViewController {
+            override func getWeather(closure:(String) -> Void) {
+                closure("test weather")
+            }
+        }
+        
+        let vcm:VCMock = VCMock()
+        vcm.showWeather()
+    }
+    
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
