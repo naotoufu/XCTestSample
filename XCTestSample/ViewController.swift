@@ -21,6 +21,12 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    @IBAction func getWeatherAction(sender: AnyObject) {
+        self.getWeather { (description) -> Void in
+            self.showAlert(message: description)
+        }
+    }
+    
     func showWeather() {
         self.getWeather{(description) -> Void in
             print(description)
@@ -35,11 +41,16 @@ class ViewController: UIViewController {
                 if let jsonResult = response.result.value as? [String: Any] {
                     if let datas = jsonResult["list"] as? [[String:Any]] {
                         for data in datas {
-                            print(data)
+                            if let weathers = data["weather"] as? [[String:Any]] {
+                                for weather in weathers {
+                                    if let description = weather["description"] as? String {
+                                        // アラートを表示
+                                        self.showAlert(message: description)
+                                    }
+                                }
+                            }
                         }
-                        // アラートを表示
-                        // let alert = UIAlertController(title: "", message: description, preferredStyle: .alert)
-                        // self.present(alert, animated: true, completion: nil)
+                        
                     }
                 }
                 break
@@ -49,6 +60,16 @@ class ViewController: UIViewController {
                 break
             }
         }
+    }
+    
+    func showAlert(message:String) {
+        let alertController:UIAlertController = UIAlertController(title: "確認", message: message, preferredStyle: .alert)
+        let okAction:UIAlertAction = UIAlertAction(title: "OK", style: .default) { (alert) -> Void in
+            // OKを選択したときに実行される処理
+        }
+        alertController.addAction(okAction)
+        
+        present(alertController, animated: true, completion: nil)
     }
 }
 
