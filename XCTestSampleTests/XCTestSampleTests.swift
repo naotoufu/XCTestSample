@@ -31,6 +31,7 @@ class XCTestSampleTests: XCTestCase {
         let vcm:VCMock = VCMock()
         vcm.showWeather()
     }
+
     
     func testExample() {
         // This is an example of a functional test case.

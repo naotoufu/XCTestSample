@@ -28,6 +28,15 @@ class XCTestSampleUITests: XCTestCase {
         super.tearDown()
     }
     
+    func testShowWeatherAlert() {
+        let app = XCUIApplication()
+        let okButton = app.alerts["確認"].buttons["OK"]
+        okButton.tap()
+        app.buttons["Get Weather"].tap()
+        okButton.tap()
+        
+    }
+    
     func testExample() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
