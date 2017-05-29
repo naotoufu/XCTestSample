@@ -9,6 +9,7 @@
 import UIKit
 import Foundation
 import Alamofire
+import SwiftyJSON
 
 class ViewController: UIViewController {
     
@@ -39,18 +40,12 @@ class ViewController: UIViewController {
             switch(response.result) {
             case .success(_):
                 if let jsonResult = response.result.value as? [String: Any] {
-                    if let datas = jsonResult["list"] as? [[String:Any]] {
-                        for data in datas {
-                            if let weathers = data["weather"] as? [[String:Any]] {
-                                for weather in weathers {
-                                    if let description = weather["description"] as? String {
-                                        // アラートを表示
-                                        self.showAlert(message: description)
-                                    }
-                                }
-                            }
+                    let json = JSON(jsonResult)
+                    json["list"].forEach{(_, weathers) in
+                        weathers["weather"].forEach{(_, descriptions) in
+                            // アラートを表示
+                            self.showAlert(message: descriptions["description"].string!)
                         }
-                        
                     }
                 }
                 break
