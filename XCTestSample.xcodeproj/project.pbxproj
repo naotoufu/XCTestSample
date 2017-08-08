@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -242,25 +242,22 @@
 				TargetAttributes = {
 					9D0A5B371ED681D700DC0B5E = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = Z7TTVB9977;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					9D0A5B4B1ED681D700DC0B5E = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = Z7TTVB9977;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						TestTargetID = 9D0A5B371ED681D700DC0B5E;
 					};
 					9D0A5B561ED681D700DC0B5E = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = Z7TTVB9977;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						TestTargetID = 9D0A5B371ED681D700DC0B5E;
 					};
 				};
 			};
 			buildConfigurationList = 9D0A5B331ED681D700DC0B5E /* Build configuration list for PBXProject "XCTestSample" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -605,11 +602,12 @@
 			baseConfigurationReference = 517BA6281FE4E0E722B4D2D6 /* Pods-XCTestSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = Z7TTVB9977;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = XCTestSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.naoto.XCTestSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -619,11 +617,12 @@
 			baseConfigurationReference = 8C47CF65D20FD853F66B0459 /* Pods-XCTestSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = Z7TTVB9977;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = XCTestSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.naoto.XCTestSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -634,11 +633,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = Z7TTVB9977;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = XCTestSampleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.naoto.XCTestSampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XCTestSample.app/XCTestSample";
 			};
@@ -650,11 +650,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = Z7TTVB9977;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = XCTestSampleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.naoto.XCTestSampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XCTestSample.app/XCTestSample";
 			};
@@ -665,11 +666,12 @@
 			baseConfigurationReference = DC476EC3536AE79654EDB17B /* Pods-XCTestSampleUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = Z7TTVB9977;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = XCTestSampleUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.naoto.XCTestSampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = XCTestSample;
 			};
@@ -680,11 +682,12 @@
 			baseConfigurationReference = FE7745C0CF27EDFDFB3714E9 /* Pods-XCTestSampleUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = Z7TTVB9977;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = XCTestSampleUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.naoto.XCTestSampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = XCTestSample;
 			};
@@ -709,6 +712,7 @@
 				9D0A5B621ED681D700DC0B5E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9D0A5B631ED681D700DC0B5E /* Build configuration list for PBXNativeTarget "XCTestSampleTests" */ = {
 			isa = XCConfigurationList;
@@ -717,6 +721,7 @@
 				9D0A5B651ED681D700DC0B5E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9D0A5B661ED681D700DC0B5E /* Build configuration list for PBXNativeTarget "XCTestSampleUITests" */ = {
 			isa = XCConfigurationList;
@@ -725,6 +730,7 @@
 				9D0A5B681ED681D700DC0B5E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -34,7 +34,7 @@ class ViewController: UIViewController {
         }
     }
     
-    func getWeather(closure:(String) -> Void) {
+    func getWeather(_ closure: (String) -> Void) {
         let urlStr = "http://api.openweathermap.org/data/2.5/forecast?q=Tokyo&APPID=d2d79c5d98c37424fe938563b2694acb"
         Alamofire.request(urlStr, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseJSON { (response:DataResponse<Any>) in
             switch(response.result) {
@@ -55,6 +55,8 @@ class ViewController: UIViewController {
                 break
             }
         }
+        // FIXME - descriptionを表示したい
+        closure("show description")
     }
     
     func showAlert(message:String) {
