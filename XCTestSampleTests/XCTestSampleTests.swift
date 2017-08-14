@@ -23,7 +23,7 @@ class XCTestSampleTests: XCTestCase {
     
     func testShowWeather() {
         class VCMock:ViewController {
-            override func getWeather(closure:(String) -> Void) {
+            override func getWeather(_ closure:(String) -> Void) {
                 closure("test weather")
             }
         }
